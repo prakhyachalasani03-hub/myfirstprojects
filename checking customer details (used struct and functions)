@@ -1,0 +1,55 @@
+/***************************
+ what i want do actually do is use struct and grouping the customer details and then
+print the details of the customer an then when u enter the the id number it gives 
+the the customer details for different ids and it also has functions to print the details 
+****************************/
+#include <stdio.h>
+// creating a customer shipment details where u actually enter your code and u get details  
+  struct details {
+      char name[50];
+      char item_type[100];
+      char brand[100];
+       int units;
+        float cost;
+      int shipment_id;
+  };
+       // creating a function for code reuseability and for my practice
+       
+       int printd(struct details d){
+           printf("NAME OF THE CUSTOMER: %s\n",d.name);
+           printf("ITEM PURCHASED : %s\n",d.item_type);
+           printf("BRAND : %s \n",d.brand);
+           printf("units : %d\n ",d.units);
+            printf("COST : %f.2\n ",d.cost);
+            printf("SHIPMENT ID : %d\n ",d.shipment_id);
+            printf("SHIPMENT STATUS : in process\n ");
+           printf("enjoy  diva....\n");
+           printf("✨ready to shine  and dazzle as always ✨ ");
+           
+       } 
+  
+  
+int main(){
+    int code;
+    printf("enter the customer vip code ");
+    scanf("%d",&code);
+    
+    struct details temp;
+    switch (code) {
+        case 101 :
+       temp = ( struct details){ "prakhya","heels","saint louboutin",1,30000,123454321};
+               break;
+        case 102 : 
+         temp =( struct details) { "catherine" ,"dress","deor",1,50000,123435321};
+               break;
+    case 103 : 
+     temp = ( struct details){ "niaomi jasmine" ,"handbag","dior",1,40000,123487321};
+               break;
+           default : printf("code not found");
+           break;
+    }
+    printd(temp);
+return 0;
+}
+
+
