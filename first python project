@@ -1,0 +1,36 @@
+# i wont ask youuu....
+name = input("name : ")
+age = int(input("age : "))
+print("welcome to cinipolis")
+print("the price of a ticket for the movie harry potter is 300 rupees")
+if(age < 13 ):
+    print("children`s discount : 50%")
+    final_price = 300-300*(0.5)
+    print(final_price)
+elif(age<=17 and age >=13):
+    print("the teens`s discount : 20% ")
+    final_price=300-300*(0.2)
+    print(final_price)
+else:
+    print("no discount")
+    print("final price = 300")
+    final_price=300
+
+    
+    
+pay = input("would that be cash or card : ")
+if (pay =="cash"):
+     print("please enjoy the movie")
+elif(pay == "card") :
+    card=input("do you have a indian bank card\n")
+    if card =="yes" :
+        print("you get a discount of about 3 percent")
+        final_price = final_price - final_price*(0.03)
+        
+    else : 
+        print("the cost of the ticket is ",final_price,"thank you enjoy your movie")
+else :
+    print("invalid payment option")
+        
+print(final_price)
+print("thank you , enjoy the movie")
