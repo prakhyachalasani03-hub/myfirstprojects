@@ -1,4 +1,4 @@
-# i wont ask youuu....
+
 name = input("name : ")
 age = int(input("age : "))
 print("welcome to cinipolis")
