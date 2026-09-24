@@ -1,23 +1,62 @@
-
 name = input("name : ")
 age = int(input("age : "))
 print("welcome to cinipolis")
-print("the price of a ticket for the movie harry potter is 300 rupees")
+
+print("please select the movies you would like to watch today")
+print("these are the available for show today")
+print("1. Harry Potter\n 2.Frozen 2\n3.Moana\n4.The Lion King\n5.Kung Fu Panda 4\n6.spiderman home coming\n")
+choise=input("selected movie : ").lower()
+match choise :
+    case "harry potter" :
+        print("movie reviewed summary : ⭐⭐⭐⭐⭐")
+        print("price of a ticket  = 300 ")
+        units=int(input(" total number of ticket : "))
+        price=300
+        final_price=units*price
+        
+    case  "frozen 2" :
+        print("movir review summary : ⭐⭐⭐⭐⭐")
+        print("price on a ticket = 320 ")
+        units=int(input(" total number of ticket : "))
+        price=320
+        final_price=units*price
+    case "moana": 
+        print("movir review summary : ⭐⭐⭐⭐⭐")
+        print("price of a ticket = 320 ")
+        units=int(input(" total number of ticket : "))
+        price=320
+        final_price=units*price
+    case "the lion king": 
+        print("movir review summary : ⭐⭐⭐⭐⭐")
+        print("price of a ticket = 350 ")
+        units=int(input(" total number of ticket : "))
+        price=320
+        final_price=units*price
+    case  "kung fu panda": 
+        print("movir review summary : ⭐⭐⭐⭐⭐")
+        print("price of a ticket  = 320 ")
+        units=int(input(" total number of ticket : "))
+        price=320
+        final_price=units*price
+    case "spiderman home coming": 
+        print("movir review summary : ⭐⭐⭐⭐⭐")
+        print("price of a ticket = 300 ")
+        units=int(input(" total number of ticket : "))
+        price=320    
+        final_price=units*price
+print("the total price of the ticket for the is", final_price,"rupees")  
 if(age < 13 ):
     print("children`s discount : 50%")
-    final_price = 300-300*(0.5)
+    final_price = final_price-final_price*(0.5)
     print(final_price)
-elif(age<=17 and age >=13):
-    print("the teens`s discount : 20% ")
-    final_price=300-300*(0.2)
+elif(age<=25 and age >=13):
+    print("the student`s discount : 20% ")
+    final_price=final_price-final_price*(0.2)
     print(final_price)
-else:
-    print("no discount")
-    print("final price = 300")
-    final_price=300
+else :
+    print("adult ")
+    print("final price :",final_price)
 
-    
-    
 pay = input("would that be cash or card : ")
 if (pay =="cash"):
     print("payment sucess of rupees ",final_price)
@@ -25,7 +64,7 @@ if (pay =="cash"):
 elif(pay == "card") :
     card=input("do you have a indian bank card\n")
     if card =="yes" :
-        if( age>=18): 
+        if( age>=25): 
                     print("you get a discount of about 3 percent")
                     final_price = final_price - final_price*(0.03)
                     print("the total price is ",final_price)
@@ -36,3 +75,4 @@ elif(pay == "card") :
 else : 
         print("here is the generated bill ")
         print("the cost of the ticket is ",final_price,"thank you enjoy your movie")
+
