@@ -20,17 +20,19 @@ else:
     
 pay = input("would that be cash or card : ")
 if (pay =="cash"):
-     print("please enjoy the movie")
+    print("payment sucess of rupees ",final_price)
+    print("please enjoy the movie")
 elif(pay == "card") :
     card=input("do you have a indian bank card\n")
     if card =="yes" :
-        print("you get a discount of about 3 percent")
-        final_price = final_price - final_price*(0.03)
-        
-    else : 
+        if( age>=18): 
+                    print("you get a discount of about 3 percent")
+                    final_price = final_price - final_price*(0.03)
+                    print("the total price is ",final_price)
+                    print("here is the generated invoice","please enjoy the movie ")
+        else:
+                    print("the total price is ",final_price)
+                    print("here is the generated invoice","please enjoy the movie ")
+else : 
+        print("here is the generated bill ")
         print("the cost of the ticket is ",final_price,"thank you enjoy your movie")
-else :
-    print("invalid payment option")
-        
-print(final_price)
-print("thank you , enjoy the movie")
